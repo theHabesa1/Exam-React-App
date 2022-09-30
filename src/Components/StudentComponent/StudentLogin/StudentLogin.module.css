@@ -18,11 +18,11 @@
        border: 1px solid #2e6da4;
        font-family: 'Raleway', sans-serif;
        background: rgba( 54, 71, 172, 0.55 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 9px );
--webkit-backdrop-filter: blur( 9px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       backdrop-filter: blur( 9px );
+       -webkit-backdrop-filter: blur( 9px );
+       border-radius: 10px;
+       border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
    
 /* -------------------------------------------------------------- */
@@ -37,8 +37,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 h1{
     color: #ffffff;
 
-    margin: 10px 130px;
-   
+    margin: 8px 200px;
+    position: relative;
+    left: 50px;
+    width: 200px;
 }
 
 

@@ -53,9 +53,9 @@
             <div id={style.container}>
 
             
-            <div id={style.containerHeadingBox}>
+            
                 <h1>Admin Login</h1>
-            </div>
+            
 
 
             <div id={style.emailBox}>
@@ -71,7 +71,7 @@
                 </label>
             </div>
 
-            <button onClick={(e) => login(e)}    id={style.login}>Login</button>
+            <button onClick={(e) => login(e)}    id={style.button}>Login</button>
              
 
             <NavLink to="/" id={style.goBackLink}> Go Back</NavLink> 

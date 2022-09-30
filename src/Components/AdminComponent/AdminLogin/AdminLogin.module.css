@@ -19,6 +19,12 @@
        margin-left: 400px;
        float: left;
        border: 1px solid #2e6da4;
+       background: rgba( 54, 71, 172, 0.55 );
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       backdrop-filter: blur( 9px );
+       -webkit-backdrop-filter: blur( 9px );
+       border-radius: 10px;
+       border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
    
 /* -------------------------------------------------------------- */
@@ -31,10 +37,10 @@
     text-align: center;
 }
 
-#containerHeadingBox h1{
-    color: #2e6da4;
+ h1{
+    color: #ffffff;
 
-    margin: 10px 10px;
+    margin: 10px 150px;
    
 }
 
@@ -57,7 +63,7 @@
      margin-left: 10%;
      margin-bottom: 20px;
     font-size: 23px;
-    color: #2e6da4;
+    color: #ffffff;
  }
 
  #emailBox input,
@@ -124,17 +130,85 @@
 
  #signup a{
      text-decoration: none;
-     color: #2e6da4d7;
+     color: #ffffffd7;
  }
 
  
  #signup a:hover{
      text-decoration: underline;
-     color: #2e6da4;
+     color: #fcfcfc;
  }
 
  #goBackLink{
     margin-top: 10px;
     display: block;
     text-align: center;
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+#button:hover{
+    background-color: #2e6da4;
+
+}
+
+#button{
+   width: 220px;
+   height: 50px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background: #2e6da4ee;
+   cursor: pointer;
+   position: relative;
+   left: 150px;
+   z-index: 0;
+   border-radius: 10px;
+}
+
+#button:before{
+   content: '';
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+   position: absolute;
+   top: -2px;
+   left:-1px;
+   background-size: 400%;
+   z-index: -1;
+   filter: blur(5px);
+   width: calc(100% + 4px);
+   height: calc(100% + 4px);
+   animation: glowing 20s linear infinite;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+   border-radius: 10px;
+}
+
+#button:active {
+   color:#2e6da4ee;
+}
+
+#button:active:after {
+   background: transparent;
+}
+
+#button:hover:before {
+   opacity: 1;
+}
+
+#button:after {
+   z-index: -1;
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background:#2e6da4ee;
+   left: 0;
+   top: 0;
+   border-radius: 10px;
+}
+
+@keyframes glowing {
+   0% { background-position: 0 0; }
+   50% { background-position: 400% 0; }
+   100% { background-position: 0 0; }
 }

@@ -8,12 +8,23 @@
 
    #container{
        background-color: white;
-       height: 760px;
+       height: 700px;
        width: 700px;
 
-       margin-left: 300px;
+       
+       
+       position: relative;
+       top: 90px;
+       left: 100px;
+       margin-left: 400px;
        float: left;
-       border: 1px solid #2e6da4;
+       
+       background: rgba( 253, 253, 253, 0.8 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12px );
+-webkit-backdrop-filter: blur( 12px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
 
 /* -------------------------------------------------------------- */
@@ -22,17 +33,17 @@
            float: left;
            width: 700px;    
            text-align: center;
-           border-bottom: 1px solid #2e6da4;
+           border-bottom: 1px solid #080808;
        }
 
        #formHeading h1{
          margin-bottom: 0px;
-         color: #2e6da4;
+         color: #000000;
      }
 
      #formHeading p{
          margin-top: 10px;
-         color: #2e6da4;
+         color: #000000;
          font-size: 20px;
      }
 /* ----------------------------------------------------------------------*/
@@ -44,7 +55,8 @@
       margin-top: 20px;
       margin-bottom: 20px;
       float: left;
-      width: 700px;    
+      width: 700px;
+      border: none;   
 
  }
 
@@ -55,7 +67,7 @@
      margin-left: 10%;
      margin-bottom: 20px;
     font-size: 23px;
-    color: #2e6da4;
+    color: #020202;
  }
 
  #nameBox input,
@@ -67,29 +79,14 @@
      width: 80%;
      margin-left: 10%;
      margin-top: 10px;
+     border: 0;
+    outline: 0;
+    border-bottom: 2px solid blue;
  }
 
 /* ----------------------------------------------------------------------*/
 
- #signup{
-     margin-top: 10px;
-     margin-left: 10%;
-
-     font-size: x-large;
-     text-align: center;
-     width: 80%;
-     height: 40px;
-     color: white;
-     background-color: #2e6da4ee;
-     cursor: pointer;
-
- }
-
-
- #signup:hover{
-     background-color: #2e6da4;
-
- }
+ 
 
 /* ----------------------------------------------------------------------*/
 
@@ -102,9 +99,71 @@
 
  #login a{
      text-decoration: none;
-     color: #2e6da4;
+     color: #2174e0;
  }
 
  #login a:hover{
      text-decoration: underline;
  }
+
+
+ #signup{
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #2e6da4ee;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+    z-index: 0;
+    border-radius: 10px;
+ }
+
+ #signup:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-1px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+ }
+
+ #signup:active {
+    color:#2e6da4ee;
+}
+
+#signup:active:after {
+    background: transparent;
+}
+
+#signup:hover:before {
+    opacity: 1;
+}
+
+#signup:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#2e6da4ee;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

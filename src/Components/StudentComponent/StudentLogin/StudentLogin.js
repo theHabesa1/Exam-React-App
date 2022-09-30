@@ -54,7 +54,7 @@
             <div id={style.container}>
 
                 
-                    <h1>Student Login</h1>
+            <h1> Login</h1>
                 
 
                <div id={style.emailBox}>
